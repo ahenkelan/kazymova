@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#piano {
+    width: 1200px;
+    margin-top: 150px;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    top: -100px; 
+    left: 10px;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+ol {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0; 
+    list-style: none; 
+}
+
+#leftHand {
+    margin-right: -20px;
+}
+
+#rightHand {
+    margin-left: -20px;
+}
+
+li {
+    position: relative;
+    background-color: #FFFFF0;
+    z-index: 1;
+    width: 60px;
+    height: 300px;  
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 0 -1px;
+    border-radius: 0 0 7px 7px;
+    color: transparent;
+    box-shadow: -3px 7px 4px #2a2a2a;
+    cursor: pointer;
+    user-select: none;
+}
+
+li:active {
+    box-shadow: -1px 2px 3px #2a2a2a;
+}
+
+.black-key {
+    position: absolute;
+    z-index: 2;
+    background-color: #1d1d1d;
+    width: 36px; 
+    height: 180px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    padding: 0;
+    box-shadow: none;
+    border-width: 0 6px 12px;
+    border-color: #000;
+    border-bottom-color: #2a2a2a;
+    border-radius: 0 0 4px 4px;
+}
+
+.black-key:hover {
+    background-color: #333;
+}
+
+.black-key:active {
+    border-bottom-width: 8px;
+    box-shadow: none;
+}
+
+.white-key {
+    margin: 0;
+}
+
+#C {
+    border-top-left-radius: 7px;
+}
+
+#B1 {
+    border-top-right-radius: 7px;
+}
